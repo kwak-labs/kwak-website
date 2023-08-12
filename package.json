@@ -12,16 +12,11 @@
   },
   "dependencies": {
     "@nuxt/webpack-builder": "3.3.1",
-    "@popperjs/core": "^2.11.8",
-    "@types/node": "^20.4.10",
     "bootstrap": "^5.2.3",
-    "fork-ts-checker-webpack-plugin": "^8.0.0",
     "nuxi": "^3.6.5",
     "nuxt-lazy-load": "^3.0.4",
-    "typescript": "^5.1.6",
     "vite": "^4.4.9",
     "vite-plugin-node-polyfills": "0.9.0",
-    "vue": "^3.3.4",
     "vue-markdown-render": "^2.0.1"
   }
 }
