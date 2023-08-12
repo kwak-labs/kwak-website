@@ -99,7 +99,7 @@ onMounted(async () => {
     await $fetch(arConfig.arweaveGateway + "/graphql", {
       body: JSON.stringify({
         query: `query {
-  transactions(sort:HEIGHT_ASC, first:100,tags:[{
+  transactions(owners:["${arConfig.address}"],sort:HEIGHT_ASC, first:100,tags:[{
   name: "Blog",
   values: ["${arConfig.queryTag}"]
 }]) {

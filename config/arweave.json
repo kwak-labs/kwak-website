@@ -1,4 +1,5 @@
 {
   "arweaveGateway": "https://g8way.io",
-  "queryTag": "kwak-main-blog"
+  "queryTag": "kwak-main-blog",
+  "address": ["VYDyg7TPf5tB4wqeCOklGx5VWjrbRFkDnsCuFaWhtb8"]
 }
