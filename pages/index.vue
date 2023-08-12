@@ -35,7 +35,11 @@
           >
         </div>
         <div class="col-md-4">
-          <a href="#" class="text-decoration-none" target="_blank">
+          <a
+            href="https://github.com/kwak-labs/glome-cosmos"
+            class="text-decoration-none"
+            target="_blank"
+          >
             <div class="card text-bg-dark">
               <img
                 src="../assets/glome-cosmos.png"
@@ -52,7 +56,11 @@
           >
         </div>
         <div class="col-md-4">
-          <a href="#" class="text-decoration-none" target="_blank">
+          <a
+            href="https://github.com/kwak-labs/kwak-tax"
+            class="text-decoration-none"
+            target="_blank"
+          >
             <div class="card text-bg-dark">
               <img
                 src="../assets/tax.jpg"
