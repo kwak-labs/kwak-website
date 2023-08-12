@@ -1,7 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { nodePolyfills } from "vite-plugin-node-polyfills";
 export default defineNuxtConfig({
-  modules: ["nuxt-lazy-load"],
   mode: "spa",
   ssr: false,
   typescript: false,
