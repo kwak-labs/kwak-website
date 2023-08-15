@@ -2,7 +2,6 @@
 import { nodePolyfills } from "vite-plugin-node-polyfills";
 export default defineNuxtConfig({
   mode: "spa",
-  ssr: false,
   typescript: false,
   target: "static",
   css: [
