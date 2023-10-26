@@ -21,7 +21,7 @@
     <hr />
     <div class="container">
       <carousel :items-to-show="1">
-        <slide v-for="image in images" :key="image">
+        <slide v-for="image in images" :key="index">
           <img :src="image" />
         </slide>
 
@@ -99,31 +99,22 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 
 import "vue3-carousel/dist/carousel.css";
 
-let images = ref([
-  "/_nuxt/assets/nomad_projects/graphic/1.webp",
-  "/_nuxt/assets/nomad_projects/graphic/2.webp",
-]);
+let images = ref(["/projects/graphic/1.webp", "/projects/graphic/2.webp"]);
 
-let edu = ref([
-  "/_nuxt/assets/nomad_projects/edu/1.mp4",
-  "/_nuxt/assets/nomad_projects/edu/2.mp4",
-]);
+let edu = ref(["/projects/edu/1.mp4", "/projects/edu/2.mp4"]);
 
-let discord = ref([
-  "/_nuxt/assets/nomad_projects/discord/1.mp4",
-  "/_nuxt/assets/nomad_projects/discord/2.mp4",
-]);
+let discord = ref(["/projects/discord/1.mp4", "/projects/discord/2.mp4"]);
 
 let nfts = ref([
-  "/_nuxt/assets/nomad_projects/nfts/1.webp",
-  "/_nuxt/assets/nomad_projects/nfts/2.webp",
-  "/_nuxt/assets/nomad_projects/nfts/3.webp",
-  "/_nuxt/assets/nomad_projects/nfts/4.webp",
-  "/_nuxt/assets/nomad_projects/nfts/5.webp",
-  "/_nuxt/assets/nomad_projects/nfts/6.webp",
-  "/_nuxt/assets/nomad_projects/nfts/7.webp",
-  "/_nuxt/assets/nomad_projects/nfts/8.webp",
-  "/_nuxt/assets/nomad_projects/nfts/9.webp",
+  "/projects/nfts/1.webp",
+  "/projects/nfts/2.webp",
+  "/projects/nfts/3.webp",
+  "/projects/nfts/4.webp",
+  "/projects/nfts/5.webp",
+  "/projects/nfts/6.webp",
+  "/projects/nfts/7.webp",
+  "/projects/nfts/8.webp",
+  "/projects/nfts/9.webp",
 ]);
 </script>
 
