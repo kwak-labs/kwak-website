@@ -8,7 +8,7 @@
   </div>
 
   <div class="section">
-    <h1 class="text-center title">Projects</h1>
+    <h1 class="text-center title">Projects and Services</h1>
     <hr />
     <div class="container">
       <div class="row row-cols-1 row-cols-lg-3 g-3 mt-2">
@@ -76,6 +76,27 @@
             </div></a
           >
         </div>
+        <!-- <div class="col-md-4">
+          <a
+            href="https://github.com/kwak-labs/kwak-tax"
+            class="text-decoration-none"
+            target="_blank"
+          >
+            <div class="card text-bg-dark">
+              <img
+                src="../assets/bots.png"
+                class="card-img-top"
+                alt="Card Logo"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Discord Bots</h5>
+                <p class="card-text">
+                  Get Custom bots implemented into your Discord Server
+                </p>
+              </div>
+            </div></a
+          >
+        </div> -->
       </div>
     </div>
   </div>
