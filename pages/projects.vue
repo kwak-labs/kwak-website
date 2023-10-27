@@ -101,7 +101,10 @@ import "vue3-carousel/dist/carousel.css";
 
 let images = ref(["/projects/graphic/1.webp", "/projects/graphic/2.webp"]);
 
-let edu = ref(["/projects/edu/1.mp4", "/projects/edu/2.mp4"]);
+let edu = ref([
+  "https://6wfaluw54ere4wwf5qo22twe6ufjdzu5xpwmjjdgcdsrndec3bpq.arweave.net/9YoF0t3hIk5axewdrU7E9QqR5p277MSkZhDlFoyC2F8",
+  "/projects/edu/2.mp4",
+]);
 
 let discord = ref([
   "https://3x6kt5vbjubf3olacqi4entxe2z7kazaboradkchtgw6sayra3xa.arweave.net/3fyp9qFNAl25YBQRwjZ3JrP1AyALogGoR5mt6QMRBu4",
