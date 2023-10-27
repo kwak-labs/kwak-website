@@ -105,7 +105,7 @@ let edu = ref(["/projects/edu/1.mp4", "/projects/edu/2.mp4"]);
 
 let discord = ref([
   "https://3x6kt5vbjubf3olacqi4entxe2z7kazaboradkchtgw6sayra3xa.arweave.net/3fyp9qFNAl25YBQRwjZ3JrP1AyALogGoR5mt6QMRBu4",
-  "/projects/discord/2.mp4",
+  "https://gwsiuzw7z466mktz2hb2r3h3kq3s4pkw64nx7atsgjcx6se7lamq.arweave.net/NaSKZt_PPeYqedHDqOz7VDcuPVb3G3-CcjJFf0ifWBk",
 ]);
 
 let nfts = ref([
