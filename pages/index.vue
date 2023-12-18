@@ -127,11 +127,10 @@ useSeoMeta({
   title: "kwak",
   ogTitle: "kwak",
   description:
-    "Trusted Validator that brings tons of utility to consumers and developers.",
+    "Trusted Validator that brings a multitude of tools to consumers and developers.",
   ogDescription:
-    "Trusted Validator that brings tons of utility to consumers and developers.",
-  ogImage:
-    "https://pbs.twimg.com/profile_images/1533879545312342016/yqDXUM38_50x50.jpg",
+    "Trusted Validator that brings a multitude of tools to consumers and developers.",
+  ogImage: "https://kwak.tech/logo.jpg",
   twitterCard: "summary_large_image",
 });
 
