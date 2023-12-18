@@ -131,7 +131,7 @@ useSeoMeta({
   ogDescription:
     "Trusted Validator that brings tons of utility to consumers and developers.",
   ogImage:
-    "https://pbs.twimg.com/profile_images/1533879545312342016/yqDXUM38_400x400.jpg",
+    "https://pbs.twimg.com/profile_images/1533879545312342016/yqDXUM38_50x50.jpg",
   twitterCard: "summary_large_image",
 });
 
