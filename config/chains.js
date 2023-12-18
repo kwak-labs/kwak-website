@@ -14,6 +14,11 @@ export let chainData = {
         link: "/chain/elys/calls",
         nuxt: true,
       },
+      {
+        label: "kwak Pot",
+        link: "https://pot.kwak.tech",
+        nuxt: false,
+      },
     ],
     arweaveQuery: "elys-call",
   },
