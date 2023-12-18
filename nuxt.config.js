@@ -1,13 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { nodePolyfills } from "vite-plugin-node-polyfills";
 export default defineNuxtConfig({
+  modules: ["@nuxtjs/tailwindcss", "nuxt-lazy-load"],
   mode: "spa",
+  ssr: true,
   typescript: false,
   target: "static",
-  css: [
-    "~/node_modules/bootstrap/dist/css/bootstrap.min.css",
-    "~/public/css/style.css",
-  ],
+  css: ["~/public/css/style.css", "~/assets/fonts.css"],
   app: {
     head: {
       link: [
@@ -23,6 +22,12 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       ignore: ["404.html"],
+    },
+  },
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
     },
   },
   builder: "vite",
@@ -49,5 +54,11 @@ export default defineNuxtConfig({
         protocolImports: true,
       }),
     ],
+  },
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
   },
 });

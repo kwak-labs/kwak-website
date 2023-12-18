@@ -1,37 +1,70 @@
 <template>
-  <nav class="navbar-custom navbar navbar-expand-lg navbar-dark">
-    <div class="container text-white">
-      <NuxtLink to="/" class="navbar-brand">
-        <img src="../assets/logo.jpg" alt="kwak" width="50" height="50" />
+  <nav class="dark:bg-gray-900">
+    <div
+      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+    >
+      <NuxtLink to="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img
+          src="../assets/logo.jpg"
+          class="h-12 transform transition-all duration-200 hover:scale-125"
+          alt="quack Logo"
+        />
       </NuxtLink>
-
       <button
-        class="navbar-toggler"
+        data-collapse-toggle="navbar-default"
         type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-default"
         aria-expanded="false"
-        aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon text-white"></span>
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="w-5 h-5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 17 14"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15"
+          />
+        </svg>
       </button>
-
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav navbar-brand text-white">
-          <li class="nav-item">
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul
+          class="font-medium text-xl flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+        >
+          <li>
+            <NuxtLink
+              :to="'/'"
+              class="block py-2 px-3 text-white rounded md:border-0 md:hover:text-yellow-200 md:p-0"
+              >Home</NuxtLink
+            >
+          </li>
+          <li>
+            <NuxtLink
+              :to="'/chains'"
+              class="block py-2 px-3 text-white rounded md:border-0 md:hover:text-yellow-200 md:p-0"
+              >Chains</NuxtLink
+            >
+          </li>
+          <li>
             <a
-              class="nav-link text-white"
               href="https://twitter.com/kwak_labs"
+              class="block py-2 px-3 text-white rounded md:border-0 md:hover:text-yellow-200 md:p-0"
               target="_blank"
               >Twitter</a
             >
           </li>
-          <li class="nav-item">
+          <li>
             <a
-              class="nav-link text-white"
-              target="_blank"
               href="https://github.com/kwak-labs"
+              class="block py-2 px-3 text-white rounded md:border-0 md:hover:text-yellow-200 md:p-0"
+              target="_blank"
               >Github</a
             >
           </li>

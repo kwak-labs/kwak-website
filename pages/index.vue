@@ -1,112 +1,113 @@
 <template>
-  <div class="main">
-    <h1 class="text-center title">kwak</h1>
-    <hr />
-    <h2 class="text-center text">
-      Blockchain Validator, Ecosystem Developer, World Builder
+  <div class="main mt-7" style="text-align: center">
+    <h1 class="text-7xl font-bold title text-center text-white">kwak</h1>
+    <h2 class="text-center text mt-3 text-2xl">
+      Cosmos Validator, Ecosystem Developer, World Builder
     </h2>
+    <NuxtLink
+      :to="'/chains'"
+      class="btn btn-md btn-outline btn-warning mt-5 text-xl transform transition-all duration-200 hover:scale-105"
+    >
+      See Chains
+    </NuxtLink>
   </div>
 
   <div class="section">
-    <h1 class="text-center title">Projects and Services</h1>
-    <hr />
-    <div class="container">
-      <div class="row row-cols-1 row-cols-lg-3 g-3 mt-2">
-        <div class="col-md-4">
-          <a
-            href="https://github.com/kwak-labs/Nexus"
-            class="text-decoration-none"
-            target="_blank"
+    <h1 class="text-7xl font-bold title text-center text-white">
+      Products <span class="kwak-yello-text">/</span> Services
+    </h1>
+    <!-- TODO: Make this render based on array -->
+    <div class="flex justify-center">
+      <div class="grid grid-cols-1 md:grid-cols-3 mt-10">
+        <div class="flex items-center m-4">
+          <div
+            class="max-w-md rounded-lg shadow card transform transition-all duration-200 hover:scale-105"
           >
-            <div class="card text-bg-dark">
-              <img
-                src="../assets/nexus.png"
-                class="card-img-top"
-                alt="Card
-              logo"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Nexus</h5>
-                <p class="card-text">
-                  On chain Cosmos based tipping discord bot
-                </p>
-              </div>
-            </div></a
-          >
+            <a
+              href="https://github.com/kwak-labs/Nexus"
+              class="text-decoration-none"
+              target="_blank"
+            >
+              <img class="rounded-t-lg" src="../assets/nexus.png" alt="" />
+            </a>
+            <div class="p-5">
+              <a href="#">
+                <h5
+                  class="mb-2 text-2xl font-bold tracking-tight dark:text-white"
+                >
+                  Nexus
+                </h5>
+              </a>
+              <p class="mb-3 font-normal dark:text-gray-400">
+                On chain Cosmos based tipping discord bot
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="col-md-4">
-          <a
-            href="https://github.com/kwak-labs/glome-cosmos"
-            class="text-decoration-none"
-            target="_blank"
+        <div class="flex items-center">
+          <div
+            class="max-w-md rounded-lg shadow card transform transition-all duration-200 hover:scale-105"
           >
-            <div class="card text-bg-dark">
+            <a
+              href="https://github.com/kwak-labs/glome-cosmos"
+              class="text-decoration-none"
+              target="_blank"
+            >
               <img
+                class="rounded-t-lg"
                 src="../assets/glome-cosmos.png"
-                class="card-img-top"
-                alt="Card Logo"
+                alt=""
               />
-              <div class="card-body">
-                <h5 class="card-title">Glome-Cosmos</h5>
-                <p class="card-text">
-                  Lazy contract engine built ontop of Cosmos
-                </p>
-              </div>
-            </div></a
-          >
+            </a>
+            <div class="p-5">
+              <a href="#">
+                <h5
+                  class="mb-2 text-2xl font-bold tracking-tight dark:text-white"
+                >
+                  Glome-Cosmos
+                </h5>
+              </a>
+              <p class="mb-3 font-normal dark:text-gray-400">
+                Lazy contract engine built ontop of Cosmos
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="col-md-4">
-          <a
-            href="https://github.com/kwak-labs/kwak-tax"
-            class="text-decoration-none"
-            target="_blank"
+        <div class="flex items-center">
+          <div
+            class="max-w-md rounded-lg shadow card transform transition-all duration-200 hover:scale-105"
           >
-            <div class="card text-bg-dark">
-              <img
-                src="../assets/tax.jpg"
-                class="card-img-top"
-                alt="Card Logo"
-              />
-              <div class="card-body">
-                <h5 class="card-title">kwak Tax</h5>
-                <p class="card-text">
-                  Export your transactions to help with taxes
-                </p>
-              </div>
-            </div></a
-          >
+            <a
+              href="https://github.com/kwak-labs/kwak-tax"
+              class="text-decoration-none"
+              target="_blank"
+            >
+              <img class="rounded-t-lg" src="../assets/tax.jpg" alt="" />
+            </a>
+            <div class="p-5">
+              <a href="#">
+                <h5
+                  class="mb-2 text-2xl font-bold tracking-tight dark:text-white"
+                >
+                  kwak Tax
+                </h5>
+              </a>
+              <p class="mb-3 font-normal dark:text-gray-400">
+                Export your transactions to help with taxes
+              </p>
+            </div>
+          </div>
         </div>
-        <!-- <div class="col-md-4">
-          <a
-            href="https://github.com/kwak-labs/kwak-tax"
-            class="text-decoration-none"
-            target="_blank"
-          >
-            <div class="card text-bg-dark">
-              <img
-                src="../assets/bots.png"
-                class="card-img-top"
-                alt="Card Logo"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Discord Bots</h5>
-                <p class="card-text">
-                  Get Custom bots implemented into your Discord Server
-                </p>
-              </div>
-            </div></a
-          >
-        </div> -->
       </div>
     </div>
   </div>
 
   <div class="section">
-    <h1 class="text-center title">Blogs</h1>
-    <h2 class="text-center text-light">Hosted On Arweave</h2>
-    <hr />
-    <div class="container">
-      <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
+    <h1 class="text-7xl font-bold title text-center text-white">Blogs</h1>
+    <h2 class="text-center text mt-3 text-2xl">Hosted On Arweave</h2>
+    <!-- TODO: Make this render based on array -->
+    <div class="flex justify-center">
+      <div class="grid grid-cols-1 md:grid-cols-3 mt-10">
         <Card
           v-for="blog in blogs"
           :key="blog.ID"
@@ -120,7 +121,6 @@
 
 <script setup>
 import arConfig from "../config/arweave.json";
-
 let blogs = ref([]);
 
 onMounted(async () => {
@@ -212,3 +212,24 @@ function timeSince(date) {
   return Math.floor(seconds) + " seconds ago";
 }
 </script>
+
+<style>
+.section {
+  margin-top: 125px;
+}
+/* .section .title {
+  color: #fff;
+} */
+
+.card {
+  background-color: oklch(0.278078 0.029596 256.847952/1);
+}
+
+.kwak-yello-text {
+  color: #e1b723;
+}
+
+.kwak-yellow-bg {
+  background-color: #e1b723;
+}
+</style>

@@ -1,18 +1,20 @@
 <template>
-  <div class="main">
-    <h1 class="text-center title">{{ title }}</h1>
-    <h2 class="text-center text">
+  <div class="main mt-10">
+    <h1 class="text-7xl font-bold title text-center text-white">{{ title }}</h1>
+    <h2 class="text-center mt-3 text-3xl">
       Posted On: {{ date.toISOString().slice(0, 10) }}
     </h2>
-    <h2 class="text-center text">
+    <h2 class="text-center mt-3 text-3xl">
       {{ date ? timeSince(date) : "Loading..." }}
     </h2>
-    <hr />
-    <div class="container">
-      <div class="markdown-block p-3">
-        <vue-markdown :source="body"> </vue-markdown>
-      </div>
-      <NuxtLink to="/" class="btn cool-button mb-3">Go Home</NuxtLink>
+  </div>
+
+  <div class="flex flex-col justify-center items-center">
+    <div class="markdown-block p-3 prose max-w-[77%]">
+      <vue-markdown :source="body"> </vue-markdown>
+    </div>
+    <div class="flex justify-center items-center w-full">
+      <NuxtLink to="/" class="btn text-yellow-200 mb-3">Go Home</NuxtLink>
     </div>
   </div>
 </template>
@@ -25,7 +27,7 @@ import VueMarkdown from "vue-markdown-render";
 let blogId = useRoute().params.id || useRoute().hash.slice(1);
 
 let title = ref("Loading...");
-let body = ref(`Loading...`);
+let body = ref("Loading...");
 let date = ref(new Date(0));
 
 onMounted(async () => {
@@ -70,3 +72,12 @@ function timeSince(date) {
   return Math.floor(seconds) + " seconds ago";
 }
 </script>
+
+<style scoped>
+.markdown-block {
+  border-radius: 1rem;
+  color: #fff;
+  margin: 20px;
+  background-color: rgba(20, 20, 20, 15%);
+}
+</style>
