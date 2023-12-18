@@ -123,6 +123,18 @@
 import arConfig from "../config/arweave.json";
 let blogs = ref([]);
 
+useSeoMeta({
+  title: "kwak",
+  ogTitle: "kwak",
+  description:
+    "Trusted Validator that brings tons of utility to consumers and developers.",
+  ogDescription:
+    "Trusted Validator that brings tons of utility to consumers and developers.",
+  ogImage:
+    "https://pbs.twimg.com/profile_images/1533879545312342016/yqDXUM38_400x400.jpg",
+  twitterCard: "summary_large_image",
+});
+
 onMounted(async () => {
   let posts = await (
     await $fetch(arConfig.arweaveGateway + "/graphql", {
