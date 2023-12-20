@@ -80,7 +80,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, watch } from "vue";
+import { ref, onMounted } from "vue";
 import arConfig from "../config/arweave.json";
 const { call } = defineProps(["call"]);
 const isLoading = ref(false);
@@ -88,57 +88,51 @@ const isPlaying = ref(false);
 const currentTime = ref(0);
 let audio;
 
-onMounted(async () => {
-  try {
-    audio = null; // Removed 'let' keyword
-    const playButton = document.getElementById("playButton" + call.ID);
-    const pauseButton = document.getElementById("pauseButton" + call.ID);
+onMounted(() => {
+  const playButton = document.getElementById("playButton" + call.ID);
+  const pauseButton = document.getElementById("pauseButton" + call.ID);
 
-    playButton.addEventListener("click", function () {
-      if (audio == null) {
-        audio = new Audio(arConfig.arweaveGateway + "/" + call.ID);
+  playButton.addEventListener("click", function () {
+    // Show loader when the play button is clicked
+    isLoading.value = true;
 
-        audio.addEventListener("canplaythrough", () => {
-          isLoading.value = false;
-        });
+    if (audio == null) {
+      audio = new Audio(arConfig.arweaveGateway + "/" + call.ID);
 
-        audio.addEventListener("seeking", () => {
-          isLoading.value = true;
-        });
+      audio.addEventListener("canplaythrough", () => {
+        // Hide loader when the audio is ready to play
+        isLoading.value = false;
+      });
 
-        audio.addEventListener("seeked", () => {
-          isLoading.value = false;
-        });
+      audio.addEventListener("seeking", () => {
+        isLoading.value = true;
+      });
 
-        pauseButton.addEventListener("click", function () {
-          audio.pause();
-          isPlaying.value = false;
-        });
+      audio.addEventListener("seeked", () => {
+        isLoading.value = false;
+      });
 
-        audio.addEventListener("playing", function () {
-          isPlaying.value = true;
-        });
+      pauseButton.addEventListener("click", function () {
+        audio.pause();
+        isPlaying.value = false;
+      });
 
-        audio.addEventListener("pause", function () {
-          isPlaying.value = false;
-        });
+      audio.addEventListener("playing", function () {
+        isPlaying.value = true;
+      });
 
-        audio.addEventListener("timeupdate", function () {
-          currentTime.value = audio.currentTime;
-        });
-      }
-      audio.play();
-      isPlaying.value = true;
-    });
-  } catch (e) {
-    console.log(e);
-  }
-});
+      audio.addEventListener("pause", function () {
+        isPlaying.value = false;
+      });
 
-watch(currentTime, (newTime) => {
-  if (audio && Math.abs(newTime - audio.currentTime) > 0.5) {
-    audio.currentTime = newTime;
-  }
+      audio.addEventListener("timeupdate", function () {
+        currentTime.value = audio.currentTime;
+      });
+    }
+
+    audio.play();
+    isPlaying.value = true;
+  });
 });
 </script>
 
