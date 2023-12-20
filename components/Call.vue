@@ -83,49 +83,52 @@
 import { ref, onMounted, watch } from "vue";
 import arConfig from "../config/arweave.json";
 const { call } = defineProps(["call"]);
-const isLoading = ref(true);
+const isLoading = ref(false);
 const isPlaying = ref(false);
 const currentTime = ref(0);
 let audio;
 
 onMounted(async () => {
   try {
-    audio = new Audio(arConfig.arweaveGateway + "/" + call.ID);
+    audio = null; // Removed 'let' keyword
     const playButton = document.getElementById("playButton" + call.ID);
     const pauseButton = document.getElementById("pauseButton" + call.ID);
 
-    audio.addEventListener("canplaythrough", () => {
-      isLoading.value = false;
-    });
-
-    audio.addEventListener("seeking", () => {
-      isLoading.value = true;
-    });
-
-    audio.addEventListener("seeked", () => {
-      isLoading.value = false;
-    });
-
     playButton.addEventListener("click", function () {
+      if (audio == null) {
+        audio = new Audio(arConfig.arweaveGateway + "/" + call.ID);
+
+        audio.addEventListener("canplaythrough", () => {
+          isLoading.value = false;
+        });
+
+        audio.addEventListener("seeking", () => {
+          isLoading.value = true;
+        });
+
+        audio.addEventListener("seeked", () => {
+          isLoading.value = false;
+        });
+
+        pauseButton.addEventListener("click", function () {
+          audio.pause();
+          isPlaying.value = false;
+        });
+
+        audio.addEventListener("playing", function () {
+          isPlaying.value = true;
+        });
+
+        audio.addEventListener("pause", function () {
+          isPlaying.value = false;
+        });
+
+        audio.addEventListener("timeupdate", function () {
+          currentTime.value = audio.currentTime;
+        });
+      }
       audio.play();
       isPlaying.value = true;
-    });
-
-    pauseButton.addEventListener("click", function () {
-      audio.pause();
-      isPlaying.value = false;
-    });
-
-    audio.addEventListener("playing", function () {
-      isPlaying.value = true;
-    });
-
-    audio.addEventListener("pause", function () {
-      isPlaying.value = false;
-    });
-
-    audio.addEventListener("timeupdate", function () {
-      currentTime.value = audio.currentTime;
     });
   } catch (e) {
     console.log(e);

@@ -20,4 +20,8 @@ module.exports = {
       body: ['"Open Sans"'],
     },
   },
+  daisyui: {
+    themes: ["dark", "dark"],
+  },
+  darkMode: "class",
 };
