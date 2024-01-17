@@ -105,7 +105,6 @@
   <div class="section">
     <h1 class="text-7xl font-bold title text-center text-white">Blogs</h1>
     <h2 class="text-center text mt-3 text-2xl">Hosted On Arweave</h2>
-    <!-- TODO: Make this render based on array -->
     <div class="flex justify-center">
       <div class="grid grid-cols-1 md:grid-cols-3 mt-10">
         <Card
@@ -182,11 +181,12 @@ onMounted(async () => {
     })
   ).data.transactions.edges;
 
+  posts = posts.reverse();
+
   for (let post of posts) {
     let Title = post.node.tags.find((t) => t.name == "Title");
     let Banner = post.node.tags.find((t) => t.name == "Banner");
     let Timestamp = post.node.tags.find((t) => t.name == "Date");
-
     blogs.value.push({
       ID: post.node.id,
       Title: Title.value,

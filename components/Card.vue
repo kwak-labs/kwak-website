@@ -11,7 +11,7 @@
             <a href="#">
               <h5
                 class="mb-2 font-bold tracking-tight dark:text-white"
-                :class="blog.Title.length <= 26 ? 'text-2xl' : 'text-xl'"
+                :class="blog.Title.length <= 24 ? 'text-2xl' : 'text-xl'"
               >
                 {{ blog.Title }}
               </h5>
@@ -31,5 +31,9 @@ const { blog, timeSince } = defineProps(["blog", "timeSince"]);
 <style scoped>
 .card {
   background-color: oklch(0.278078 0.029596 256.847952/1);
+}
+.card img {
+  width: 500px;
+  height: 200px;
 }
 </style>
