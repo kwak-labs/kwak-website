@@ -23,9 +23,8 @@
     <h1 class="text-7xl font-bold title text-center text-white">
       Chain Services
     </h1>
-    <!-- TODO: Make this render based on array -->
     <div class="flex justify-center">
-      <div class="grid grid-cols-1 md:grid-cols-3 mt-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 mt-8">
         <ServiceLabel
           v-for="service in SelectedChainData.Services"
           :data="service"

@@ -19,6 +19,16 @@ export let chainData = {
         link: "https://pot.kwak.tech",
         nuxt: false,
       },
+      {
+        label: "RPC Url",
+        link: "https://elys-rpc.kwak.tech",
+        nuxt: false,
+      },
+      {
+        label: "Rest API Url",
+        link: "https://elys-rest.kwak.tech",
+        nuxt: false,
+      },
     ],
     arweaveQuery: "elys-call",
   },
