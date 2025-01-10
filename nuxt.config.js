@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   typescript: false,
   target: "static",
   css: ["~/public/css/style.css", "~/assets/fonts.css"],
+
   app: {
     head: {
       link: [
@@ -19,24 +20,30 @@ export default defineNuxtConfig({
       title: "kwak",
     },
   },
+
   nitro: {
     prerender: {
       ignore: ["404.html"],
     },
   },
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
+
   builder: "vite",
+
   experimental: {
     payloadExtraction: false,
   },
+
   generate: {
     fallback: "index.html",
   },
+
   vite: {
     plugins: [
       nodePolyfills({
@@ -55,10 +62,13 @@ export default defineNuxtConfig({
       }),
     ],
   },
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
+
+  compatibilityDate: "2025-01-09",
 });

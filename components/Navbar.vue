@@ -1,12 +1,12 @@
 <template>
-  <nav class="dark:bg-gray-900">
+  <nav class="bg-gray-900">
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
     >
       <NuxtLink to="/" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img
-          src="../assets/logo.jpg"
-          class="h-12 transform transition-all duration-200 hover:scale-125"
+          src="https://ro5mh9ts7b.ufs.sh/f/UrrC5VsIzS9awMbQH9cnOmyY3avDG2XQrgLFd0tuKoEUkxHP"
+          class="h-12 animate-logo"
           alt="quack Logo"
         />
       </NuxtLink>
@@ -36,7 +36,7 @@
       </button>
       <div class="hidden w-full md:block md:w-auto" id="navbar-default">
         <ul
-          class="font-medium text-xl flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          class="font-medium text-xl flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-gray-800 md:bg-gray-900 border-gray-700"
         >
           <li>
             <NuxtLink
@@ -46,18 +46,11 @@
             >
           </li>
           <li>
-            <NuxtLink
-              :to="'/chains'"
-              class="block py-2 px-3 text-white rounded md:border-0 md:hover:text-yellow-200 md:p-0"
-              >Chains</NuxtLink
-            >
-          </li>
-          <li>
             <a
-              href="https://twitter.com/kwak_labs"
+              href="https://x.com/kwak_labs"
               class="block py-2 px-3 text-white rounded md:border-0 md:hover:text-yellow-200 md:p-0"
               target="_blank"
-              >Twitter</a
+              >X</a
             >
           </li>
           <li>
@@ -73,3 +66,33 @@
     </div>
   </nav>
 </template>
+
+<style>
+@keyframes logo-animation {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+  }
+  75% {
+    transform: scale(0.8) rotate(540deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1) rotate(720deg);
+    opacity: 1;
+  }
+}
+
+.animate-logo {
+  animation: logo-animation 2s ease-in-out;
+  animation-delay: 0.5s;
+}
+</style>
