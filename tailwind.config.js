@@ -1,9 +1,5 @@
 module.exports = {
-  plugins: [
-    require("flowbite/plugin"),
-    require("daisyui"),
-    require("@tailwindcss/typography"),
-  ],
+  plugins: [require("daisyui")],
   content: [
     "./components/**/*.{vue,css}",
     "./pages/**/*.{vue,css}",

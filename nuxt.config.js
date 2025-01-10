@@ -1,7 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { nodePolyfills } from "vite-plugin-node-polyfills";
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/tailwindcss", "nuxt-lazy-load"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/image"],
   mode: "spa",
   ssr: true,
   typescript: false,
@@ -42,25 +41,6 @@ export default defineNuxtConfig({
 
   generate: {
     fallback: "index.html",
-  },
-
-  vite: {
-    plugins: [
-      nodePolyfills({
-        // To exclude specific polyfills, add them to this list.
-        exclude: [
-          "fs", // Excludes the polyfill for `fs` and `node:fs`.
-        ],
-        // Whether to polyfill specific globals.
-        globals: {
-          Buffer: true, // can also be 'build', 'dev', or false
-          global: true,
-          process: true,
-        },
-        // Whether to polyfill `node:` protocol imports.
-        protocolImports: true,
-      }),
-    ],
   },
 
   postcss: {

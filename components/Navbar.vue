@@ -4,10 +4,13 @@
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
     >
       <NuxtLink to="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img
+        <nuxt-img
           src="https://ro5mh9ts7b.ufs.sh/f/UrrC5VsIzS9awMbQH9cnOmyY3avDG2XQrgLFd0tuKoEUkxHP"
           class="h-12 animate-logo"
           alt="quack Logo"
+          loading="eager"
+          format="webp"
+          quality="80"
         />
       </NuxtLink>
       <button
