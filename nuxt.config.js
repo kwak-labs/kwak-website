@@ -1,14 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  devtools: { enabled: true },
   modules: ["@nuxtjs/tailwindcss", "@nuxt/image"],
-  mode: "spa",
   ssr: true,
   typescript: false,
-  target: "static",
+  nitro: {
+    preset: "static",
+  },
   css: ["~/public/css/style.css", "~/assets/fonts.css"],
-
   app: {
     head: {
+      title: "kwak",
       link: [
         {
           rel: "icon",
@@ -16,39 +18,19 @@ export default defineNuxtConfig({
           href: "/favicon.ico",
         },
       ],
-      title: "kwak",
     },
   },
-
-  nitro: {
-    prerender: {
-      ignore: ["404.html"],
-    },
+  tailwindcss: {
+    cssPath: "~/assets/css/tailwind.css",
+    configPath: "tailwind.config.js",
+    exposeConfig: false,
+    injectPosition: 0,
+    viewer: true,
   },
-
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
+  build: {
+    transpile: ["vue"],
   },
-
-  builder: "vite",
-
   experimental: {
     payloadExtraction: false,
   },
-
-  generate: {
-    fallback: "index.html",
-  },
-
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
-  },
-
-  compatibilityDate: "2025-01-09",
 });
