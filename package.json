@@ -1,7 +1,10 @@
 {
-  "name": "kwak-site",
+  "name": "nuxt-app",
   "private": true,
-  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": "22.15.0"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -10,26 +13,13 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/devtools": "latest",
-    "@nuxt/image": "1.10.0",
-    "@nuxtjs/tailwindcss": "^6.11.4",
-    "daisyui": "^4.12.23",
-    "nuxt": "^3.10.3",
-    "postcss": "^8.4.35",
-    "typescript": "^5.4.2",
-    "vite": "^5.1.6",
-    "vue": "^3.4.21"
+    "@nuxt/image": "^1.10.0",
+    "@nuxtjs/tailwindcss": "^6.13.1",
+    "nuxt": "^3.16",
+    "vue": "latest"
   },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
   "devDependencies": {
-    "@types/node": "^20.11.28"
-  },
-  "resolutions": {
-    "vue": "^3.4.21",
-    "vite": "^5.1.6"
-  },
-  "engines": {
-    "node": "22.15.0"
-  },
-  "type": "module",
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+    "daisyui": "^4.12.23"
+  }
 }
