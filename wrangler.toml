@@ -1,0 +1,4 @@
+name = "elysscan" # Add your Cloudflare Pages project name here
+compatibility_date = "2024-04-13" # Add a recent date
+compatibility_flags = [ "nodejs_compat" ]
+pages_build_output_dir = "dist"
