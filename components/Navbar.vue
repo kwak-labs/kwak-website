@@ -7,11 +7,14 @@
         <nuxt-img
           src="https://ro5mh9ts7b.ufs.sh/f/UrrC5VsIzS9awMbQH9cnOmyY3avDG2XQrgLFd0tuKoEUkxHP"
           class="h-12 animate-logo"
-          alt="quack Logo"
+          alt="kwak Logo"
           loading="eager"
           format="webp"
           quality="80"
         />
+        <div class="text-xl font-bold text-white">
+          KWAK <span style="color: #ffc400;">LABS</span>
+        </div>
       </NuxtLink>
       <button
         data-collapse-toggle="navbar-default"
@@ -39,29 +42,40 @@
       </button>
       <div class="hidden w-full md:block md:w-auto" id="navbar-default">
         <ul
-          class="font-medium text-xl flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-gray-800 md:bg-gray-900 border-gray-700"
+          class="font-semibold text-lg flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-gray-800 md:bg-gray-900 border-gray-700"
         >
           <li>
             <NuxtLink
               :to="'/'"
-              class="block py-2 px-3 text-white rounded md:border-0 md:hover:text-yellow-200 md:p-0"
+              class="nav-link block py-2 px-4 text-gray-300 rounded md:border-0 md:p-0 transition-all duration-200 hover:text-white"
               >Home</NuxtLink
             >
           </li>
           <li>
             <a
-              href="https://x.com/kwak_labs"
-              class="block py-2 px-3 text-white rounded md:border-0 md:hover:text-yellow-200 md:p-0"
+              href="https://discord.gg/7gs7qG4QVA"
+              class="nav-link block py-2 px-4 text-gray-300 rounded md:border-0 md:p-0 transition-all duration-200 hover:text-white"
               target="_blank"
+              rel="noopener noreferrer"
+              >Discord</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://x.com/kwak_labs"
+              class="nav-link block py-2 px-4 text-gray-300 rounded md:border-0 md:p-0 transition-all duration-200 hover:text-white"
+              target="_blank"
+              rel="noopener noreferrer"
               >X</a
             >
           </li>
           <li>
             <a
               href="https://github.com/kwak-labs"
-              class="block py-2 px-3 text-white rounded md:border-0 md:hover:text-yellow-200 md:p-0"
+              class="nav-link block py-2 px-4 text-gray-300 rounded md:border-0 md:p-0 transition-all duration-200 hover:text-white"
               target="_blank"
-              >Github</a
+              rel="noopener noreferrer"
+              >GitHub</a
             >
           </li>
         </ul>
@@ -97,5 +111,23 @@
 .animate-logo {
   animation: logo-animation 2s ease-in-out;
   animation-delay: 0.5s;
+}
+
+/* Custom hover effects */
+.nav-link:hover {
+  color: #ffc400 !important;
+  transform: translateY(-1px);
+}
+
+/* Smooth transitions */
+.nav-link {
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 0.025em;
+}
+
+/* Brand text styling */
+.text-xl.font-bold {
+  font-family: 'Inter', system-ui, sans-serif;
+  letter-spacing: 0.05em;
 }
 </style>
